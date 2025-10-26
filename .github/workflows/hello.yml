@@ -1,5 +1,11 @@
 name: Hello Agile
-on: [push]
+on:
+  push:
+    branches:
+      - [cite_start]dev  # Triggers on push to dev [cite: 72]
+  pull_request:
+    branches:
+      - [cite_start]main # Triggers on PR targeting main [cite: 72]
 jobs:
   say_hello:
     runs-on: ubuntu-latest
